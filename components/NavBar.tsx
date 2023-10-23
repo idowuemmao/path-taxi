@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-// import { UserButton } from "@clerk/nextjs";
 
 const NavBar = () => {
   return (
@@ -29,7 +28,6 @@ const NavBar = () => {
           Help
         </li>
       </ul>
-      {/* <UserButton afterSignOutUrl="/" /> */}
     </div>
   );
 };
