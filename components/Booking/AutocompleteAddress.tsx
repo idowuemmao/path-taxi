@@ -9,11 +9,11 @@ const MAPBOX_RETRIEVE_URL =
 // retrieve
 const AutocompleteAddress = () => {
   //Stores the user's input for the source address
-  const [source, setSource] = useState<any>("");
+  const [source, setSource] = useState<string>("");
   //Indicates if there has been a change in the source input
-  const [sourceChange, setSourceChange] = useState<any>(false);
+  const [sourceChange, setSourceChange] = useState<boolean>(false);
   //Indicates if there has been a change in the destination input.
-  const [destinationChange, setDestinationChange] = useState<any>(false);
+  const [destinationChange, setDestinationChange] = useState<boolean>(false);
   const { sourceCoordinates, setSourceCoordinates } =
     useContext(SourceCordiContext);
   const { destinationCoordinates, setDestinationCoordinates } = useContext(

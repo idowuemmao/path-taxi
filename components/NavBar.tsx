@@ -14,7 +14,7 @@ const NavBar = () => {
           className="w-auto"
           priority={true}
         />
-        <h1 className="font-black text-[0.55rem] text-center text-yellow-400">
+        <h1 className="font-black text-sm text-center text-yellow-400">
           PATH TAXI
         </h1>
       </nav>
