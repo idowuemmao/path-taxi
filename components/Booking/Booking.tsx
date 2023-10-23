@@ -21,7 +21,7 @@ const Booking = () => {
         <Cards />
         <button
           onClick={() => router.push("/payment")}
-          // disabled={!selectedCarAmount}
+          disabled={!selectedCarAmount}
           className={`bg-yellow-500 p-2 text-center mt-4 text-black rounded-lg cursor-pointer hover:scale-95 transition-all font-semibold ${
             !selectedCarAmount ? "bg-yellow-200" : null
           }`}

@@ -9,11 +9,11 @@ const MAPBOX_RETRIEVE_URL =
 // retrieve
 const AutocompleteAddress = () => {
   //Stores the user's input for the source address
-  const [source, setSource] = useState<string>("");
+  const [source, setSource] = useState<any>("");
   //Indicates if there has been a change in the source input
-  const [sourceChange, setSourceChange] = useState<boolean>(false);
+  const [sourceChange, setSourceChange] = useState<any>(false);
   //Indicates if there has been a change in the destination input.
-  const [destinationChange, setDestinationChange] = useState<boolean>(false);
+  const [destinationChange, setDestinationChange] = useState<any>(false);
   const { sourceCoordinates, setSourceCoordinates } =
     useContext(SourceCordiContext);
   const { destinationCoordinates, setDestinationCoordinates } = useContext(
@@ -74,7 +74,6 @@ const AutocompleteAddress = () => {
         process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
     );
     const result = await res.json();
-    console.log(result);
     setSourceCoordinates({
       lng: result.features[0].geometry.coordinates[0],
       lat: result.features[0].geometry.coordinates[1],
@@ -93,7 +92,6 @@ const AutocompleteAddress = () => {
         process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
     );
     const result = await res.json();
-    console.log(result);
     setDestinationCoordinates({
       lng: result.features[0].geometry.coordinates[0],
       lat: result.features[0].geometry.coordinates[1],
