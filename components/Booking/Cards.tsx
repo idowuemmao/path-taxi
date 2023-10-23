@@ -13,7 +13,7 @@ const Cards = () => {
           <div
             key={index}
             onClick={() => setSelectedCard(index)}
-            className={`border-[1px] w-fit flex items-center justify-center rounded-lg cursor-pointer mt-2 hover:scale-105 transition-all p-1 hover:border-yellow-500 ${
+            className={`border-2 w-fit flex items-center justify-center rounded-lg cursor-pointer mt-2 hover:scale-105 transition-all p-1 hover:border-yellow-500 ${
               selectedCard == index ? "border-4 border-yellow-500 " : null
             }`}
           >

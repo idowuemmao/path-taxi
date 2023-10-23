@@ -53,7 +53,6 @@ const MapBoxMap = () => {
         throw new Error("Request failed with status " + res.status);
       }
       const result = await res.json();
-      console.log(result);
       setDirectionData(result);
     } catch (error) {
       console.error("Error fetching directions:", error);

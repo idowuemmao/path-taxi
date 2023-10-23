@@ -29,8 +29,8 @@ const Cars = () => {
               setSelectedCar(index);
               setSelectedCarAmount(getCost(items.charges));
             }}
-            className={`border-[1px] p-2 rounded-lg hover:border-yellow-500 hover:scale-105 transition delay-150 ease-out cursor-pointer  ${
-              index == selectedCar ? "border-yellow-500 border-6" : null
+            className={`border-2 p-2 rounded-lg hover:border-yellow-500 hover:scale-105 transition delay-150 ease-out cursor-pointer  ${
+              index == selectedCar ? "border-yellow-500 border-4" : null
             }`}
           >
             <Image
@@ -38,6 +38,7 @@ const Cars = () => {
               alt={items.name}
               width={150}
               height={200}
+              className="w-auto h-auto"
             />
             <div className="grid gap-1 text-[0.6rem]">
               <h3 className="">{items.name}</h3>

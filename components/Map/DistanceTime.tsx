@@ -10,7 +10,7 @@ const DistanceTime = () => {
           <h2 className="">
             Distance:{" "}
             {Math.floor(
-              directionData.routes[0].distance * 0.0006213709999975145,
+              directionData.routes[0].distance * 0.0006213709999975145
             )}{" "}
             Miles
           </h2>
