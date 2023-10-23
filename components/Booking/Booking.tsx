@@ -1,5 +1,5 @@
 // 'use client'
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import AutocompleteAddress from "./AutocompleteAddress";
 import Cars from "./Cars";
 import Cards from "./Cards";
@@ -8,7 +8,7 @@ import { SelectedCarAmountContext } from "@/context/SelectedCarAmountContext";
 
 const Booking = () => {
   const { selectedCarAmount, setSelectedCarAmount } = useContext(
-    SelectedCarAmountContext,
+    SelectedCarAmountContext
   );
   const router: any = useRouter();
 

@@ -45,17 +45,21 @@ const MapBoxMap = () => {
 
   //call the direction api where we get the list of coord
   const getDirectionRoute = async () => {
-    try {
-      const res = await fetch(
-        `https://api.mapbox.com/directions/v5/mapbox/driving/${sourceCoordinates.lng}%2C${sourceCoordinates.lat}%3B${destinationCoordinates.lng}%2C${destinationCoordinates.lat}?alternatives=true&geometries=geojson&language=en&overview=full&steps=true&access_token=${process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}`
-      );
-      if (!res.ok) {
-        throw new Error("Request failed with status " + res.status);
+    if (sourceCoordinates && destinationCoordinates) {
+      try {
+        const res = await fetch(
+          `https://api.mapbox.com/directions/v5/mapbox/driving/${sourceCoordinates.lng}%2C${sourceCoordinates.lat}%3B${destinationCoordinates.lng}%2C${destinationCoordinates.lat}?alternatives=true&geometries=geojson&language=en&overview=full&steps=true&access_token=${process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}`
+        );
+        if (!res.ok) {
+          throw new Error("Request failed with status " + res.status);
+        }
+        const result = await res.json();
+        setDirectionData(result);
+      } catch (error) {
+        console.error("Error fetching directions:", error);
       }
-      const result = await res.json();
-      setDirectionData(result);
-    } catch (error) {
-      console.error("Error fetching directions:", error);
+    } else {
+      console.log("The sourceCord and destCord is not defined");
     }
   };
 
