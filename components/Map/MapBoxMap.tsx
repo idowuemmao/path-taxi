@@ -63,6 +63,8 @@ const MapBoxMap = () => {
     }
   };
 
+  console.log(process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN);
+
   return (
     <div className="p-4 relative">
       <h2 className="text-xl font-semibold text-yellow-500 pb-2">Map</h2>
